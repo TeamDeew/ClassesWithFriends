@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
-
+import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions } from "react-native";
 import TeamDeew from "../assets/TeamDEEW.png";
+import LinearGradient from 'react-native-linear-gradient';
 
 export default class Homescreen extends Component {
   render() {
     return (
+      <LinearGradient colors = {['#ff146c','#ff4b2b']} /*style = {styles.angled}*/>
       <View style={styles.container}>
         <View style={styles.topContainer}>
-          <Text style={styles.title}> Classes With Friends! </Text>
+          <Text style={styles.title}> Classes with friends </Text>
           <Image source={TeamDeew} style={styles.image} />
         </View>
         <View style={styles.buttonContainer}>
@@ -20,6 +21,7 @@ export default class Homescreen extends Component {
           </TouchableOpacity>
         </View>
       </View>
+      </LinearGradient>
     );
   }
 }
@@ -28,7 +30,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    paddingHorizontal: 10
+    width: Dimensions.get('window').width
+    },
+  angled:{
+    //useAngle: true, angle: 45, angleCenter: { x: 0.5, y: 0.5} 
+    
   },
   image: {
     height: 150,
