@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         {/* <Layout /> */}
-        <UploadPage />
+        <Layout/>
       </View>
     );
   }
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(89, 110, 129, 1)"
+    backgroundColor: "rgba(151, 213,200, 1)"
+    
   }
 });

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   button: {
     margin: 10,
-    backgroundColor: "rgba(151, 213,200, 1)",
+    backgroundColor: "rgba(89, 110, 129, 1)",
     alignItems: "center",
     padding: 10,
     borderRadius: 20
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 50,
-    color: "#fff"
+    color: "#fff",
+    fontFamily: "Montserrat-ExtraLight"
   }
 });
