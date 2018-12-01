@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Image, Dimensions } from "react-native";
-import TeamDeew from "../assets/TeamDEEW.png";
+import TeamDeew from "../assets/classeswithfriends.png";
 import LinearGradient from 'react-native-linear-gradient';
 
 export default class Homescreen extends Component {
   render() {
     return (
-      <LinearGradient colors = {['#ff146c','#ff4b2b']} /*style = {styles.angled}*/>
+      <LinearGradient
+      start={{x: 1.0, y: 0.25}} end={{x: 0.0, y: 0.75}} 
+      colors = {['#ff146c','#ff4b2b']}>
       <View style={styles.container}>
         <View style={styles.topContainer}>
-          <Text style={styles.title}> Classes with friends </Text>
           <Image source={TeamDeew} style={styles.image} />
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={this.onPress}>
-            <Text> Add Cladsfgsdfgfsdg ss Schedule </Text>
+            <Text style={styles.buttonText}> Add Schedule </Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={this.onPress}>
-            <Text> Enter Friend's Code </Text>
+            <Text style={styles.buttonText}> Enter Friend's Code </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -26,19 +27,19 @@ export default class Homescreen extends Component {
   }
 }
 
+///*<Text style={styles.title}> Classes with friends </Text>
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     width: Dimensions.get('window').width
     },
-  angled:{
-    //useAngle: true, angle: 45, angleCenter: { x: 0.5, y: 0.5} 
-    
-  },
   image: {
-    height: 150,
-    width: 150
+    height: 230,
+    width: 310,
+    padding: 10,
+    marginBottom: Dimensions.get("window").height/5
   },
   topContainer: {
     //flex: 1,
@@ -52,11 +53,19 @@ const styles = StyleSheet.create({
     //paddingHorizontal: 10
   },
   button: {
-    margin: 10,
-    backgroundColor: "rgba(151, 213,200, 1)",
+    margin: 15,
+    backgroundColor: 'transparent',
+    borderRadius: 100,
+    borderWidth: 1,
+    borderColor: 'white',
     alignItems: "center",
-    padding: 10,
-    borderRadius: 20
+    padding: 12.5,
+  },
+  buttonText: {
+    //fontWeight: "bold",
+    color: 'white',
+    fontFamily: 'Avenir',
+    fontSize: 16
   },
   title: {
     textAlign: "center",
