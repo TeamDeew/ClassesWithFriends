@@ -15,7 +15,7 @@ export default class Homescreen extends Component {
   }
 
   renderComp = () => {
-    return 
+    return
   }
 
   render() {
@@ -23,7 +23,7 @@ export default class Homescreen extends Component {
     let component;
     if(page === 'home') {
       component = <LinearGradient
-      start={{x: 1.0, y: 0.25}} end={{x: 0.0, y: 0.75}} 
+      start={{x: 1.0, y: 0.25}} end={{x: 0.0, y: 0.75}}
       colors = {['#ff146c','#ff4b2b']}>
       <ScrollView>
         <View style={styles.container}>
