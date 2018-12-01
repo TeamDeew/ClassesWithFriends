@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Dimensions } from "react-native";
-import LinearGradient from 'react-native-linear-gradient';
+import LinearGradient from "react-native-linear-gradient";
 
 import Layout from "./components/Layout";
 import UploadPage from "./components/UploadPage";
@@ -10,8 +10,8 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* <Layout /> */}
-        <UploadPage/>
+        <Layout />
+        {/* <UploadPage/> */}
       </View>
     );
   }
