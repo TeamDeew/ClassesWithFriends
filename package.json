@@ -10,11 +10,11 @@
     "axios": "^0.18.0",
     "react": "16.6.1",
     "react-native": "0.57.7",
+    "react-native-cloud-vision-api": "^0.2.1",
+    "react-native-fs": "^2.12.1",
     "react-native-gesture-handler": "^1.0.10",
     "react-native-linear-gradient": "^2.5.2",
     "react-navigation": "^3.0.4",
-    "react-native-cloud-vision-api": "^0.2.1",
-    "react-native-fs": "^2.12.1",
     "rn-fetch-blob": "^0.10.13"
   },
   "devDependencies": {

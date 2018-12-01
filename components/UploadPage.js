@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  Image,
+  Dimensions
+} from "react-native";
 import axios from "axios";
 
 import TeamDeew from "../assets/TeamDEEW.png";
