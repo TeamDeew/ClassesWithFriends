@@ -4,16 +4,15 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import Layout from "./components/Layout";
 import UploadPage from "./components/UploadPage";
+import Willtesting from "./components/Willtesting";
 
 export default class App extends Component {
   render() {
     return (
-      //<LinearGradient colors = {['#ff146c','#ff4b2b']}>
       <View style={styles.container}>
         {/* <Layout /> */}
-        <UploadPage />
+        <UploadPage/>
       </View>
-      //</LinearGradient>
     );
   }
 }
