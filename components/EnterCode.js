@@ -33,9 +33,10 @@ export default class EnterCode extends Component {
               <Image source={TeamDeew} style={styles.image} />
             </View>
             <View style={styles.buttonContainer}>
-              <Text style={styles.resText}>{`You have the following courses: ${
-                this.props.response
-              } !`}</Text>
+              <Text style={styles.resText}>
+                {this.props.response &&
+                  `You have the following courses: ${this.props.response} !`}
+              </Text>
               <TextInput
                 style={styles.button}
                 onChangeText={text => this.props.codeHandler(text)}
@@ -64,7 +65,8 @@ const styles = StyleSheet.create({
   resText: {
     color: "#ffffff",
     fontSize: 20,
-    textAlign: "center"
+    textAlign: "center",
+    margin: 10
   },
   container: {
     flex: 1,
