@@ -9,10 +9,58 @@ import {
   ScrollView
 } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import axios from "axios";
+import ImagePicker from "react-native-image-picker";
 
 import TeamDeew from "../assets/classeswithfriends.png";
 
 export default class Homescreen extends Component {
+  uploadImage = base64Image => {
+    axios
+      .post(
+        "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCnPJotszGZhgfp6DCuPzzheStbBaGdHWo",
+        {
+          requests: [
+            {
+              image: {
+                content: base64Image
+              },
+              features: [
+                {
+                  type: "TEXT_DETECTION"
+                }
+              ]
+            }
+          ]
+        }
+      )
+      .then(response => {
+        console.log("RESPONSE:", response.data);
+      })
+      .catch(err => {
+        console.log("ERROR:", err.response);
+      });
+  };
+
+  addScheduleHandler = () => {
+    ImagePicker.showImagePicker(null, response => {
+      console.log("Response = ", response);
+
+      if (response.didCancel) {
+        console.log("User cancelled image picker");
+      } else if (response.error) {
+        console.log("ImagePicker Error: ", response.error);
+      } else if (response.customButton) {
+        console.log("User tapped custom button: ", response.customButton);
+      } else {
+        const source = { uri: response.uri };
+
+        const B64Image = response.data;
+        this.uploadImage(B64Image);
+      }
+    });
+  };
+
   render() {
     return (
       <LinearGradient
