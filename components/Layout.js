@@ -35,7 +35,14 @@ export default class Homescreen extends Component {
         }
       )
       .then(response => {
-        console.log("RESPONSE:", response.data);
+        let classes = [];
+        response.data.responses[0].textAnnotations.map(word => {
+          if (word.description.includes('CIS*') && !classes.includes(word.description))
+          {
+            classes.push(word.description);
+          }
+       })
+       console.log(classes);
       })
       .catch(err => {
         console.log("ERROR:", err.response);
