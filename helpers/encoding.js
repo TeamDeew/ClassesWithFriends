@@ -84,7 +84,7 @@ export function encodeCourseCode(s) {
 }
 
 export function decodeCharacter(s) {
-  char = s.toLowerCase();
+  const char = s.toLowerCase();
   if (char == "1") {
     return "CIS*1000";
   } else if (char == "2") {
