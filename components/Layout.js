@@ -12,9 +12,21 @@ import LinearGradient from "react-native-linear-gradient";
 import axios from "axios";
 import ImagePicker from "react-native-image-picker";
 
+import {
+  createUserCode,
+  decodeUserCode,
+  compareCourseCodes,
+  encodeCourseCode,
+  decodeCourseCode
+} from "../helpers/encoding";
+
 import TeamDeew from "../assets/classeswithfriends.png";
 
 export default class Homescreen extends Component {
+  state = {
+    userCode: ""
+  };
+
   uploadImage = base64Image => {
     axios
       .post(
@@ -37,12 +49,17 @@ export default class Homescreen extends Component {
       .then(response => {
         let classes = [];
         response.data.responses[0].textAnnotations.map(word => {
-          if (word.description.includes('CIS*') && !classes.includes(word.description))
-          {
+          if (
+            word.description.includes("CIS*") &&
+            !classes.includes(word.description)
+          ) {
             classes.push(word.description);
           }
-       })
-       console.log(classes);
+        });
+
+        // have array of clases
+        const userCode = createUserCode(classes);
+        this.setState({ userCode });
       })
       .catch(err => {
         console.log("ERROR:", err.response);
@@ -60,8 +77,6 @@ export default class Homescreen extends Component {
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
       } else {
-        const source = { uri: response.uri };
-
         const B64Image = response.data;
         this.uploadImage(B64Image);
       }
@@ -69,6 +84,8 @@ export default class Homescreen extends Component {
   };
 
   render() {
+    const userCode = this.state.userCode;
+
     return (
       <LinearGradient
         start={{ x: 1.0, y: 0.25 }}
@@ -81,6 +98,9 @@ export default class Homescreen extends Component {
               <Image source={TeamDeew} style={styles.image} />
             </View>
             <View style={styles.buttonContainer}>
+              <Text style={styles.userCode}>
+                {userCode && `Your Code is: ${userCode}`}
+              </Text>
               <TouchableOpacity
                 style={styles.button}
                 onPress={this.addScheduleHandler}
@@ -99,6 +119,11 @@ export default class Homescreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  userCode: {
+    color: "#ffffff",
+    fontSize: 20,
+    textAlign: "center"
+  },
   container: {
     flex: 1,
     justifyContent: "center",
