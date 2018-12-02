@@ -13,6 +13,7 @@
     "react-native-cloud-vision-api": "^0.2.1",
     "react-native-fs": "^2.12.1",
     "react-native-gesture-handler": "^1.0.10",
+    "react-native-image-picker": "^0.27.1",
     "react-native-linear-gradient": "^2.5.2",
     "react-navigation": "^3.0.4",
     "rn-fetch-blob": "^0.10.13"
