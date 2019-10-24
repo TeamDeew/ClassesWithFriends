@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -42,10 +41,9 @@
 		8569A75E20BD44A10448F05B /* libPods-TeamDeew-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8955FE54924396DDE78CEB0C /* libPods-TeamDeew-tvOSTests.a */; };
 		A4FC7389553AA87AB89A9630 /* libPods-TeamDeew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EC3D7164FD14F58CD2F57C /* libPods-TeamDeew.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		6848A2BBE79B4DC38D5E0BDD /* TeamDEEW.png in Resources */ = {isa = PBXBuildFile; fileRef = 1435329DD56B4980AA848255 /* TeamDEEW.png */; };
+		802BDA65BB5A43BE8655953A /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB71B33D72FC40DEAFEA9842 /* Montserrat-ExtraLight.ttf */; };
 		B4F5C98E2B4B851D6890219E /* libPods-TeamDeewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 473BE70BD6B6643B10D62457 /* libPods-TeamDeewTests.a */; };
-		FA8BE8D421B327B400E685DF /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8BE8D321B3278A00E685DF /* libRNFetchBlob.a */; };
-		FA8BE91121B344CF00E685DF /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8BE90E21B344C100E685DF /* libRNFS.a */; };
-		FA8BE95D21B3587500E685DF /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8BE95B21B356EB00E685DF /* libRNImagePicker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -408,14 +406,8 @@
 		95EC3D7164FD14F58CD2F57C /* libPods-TeamDeew.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamDeew.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA03CAF38BBA8A464AF8FC3 /* Pods-TeamDeew-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDeew-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDeew-tvOSTests/Pods-TeamDeew-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		D5CE8BD0E83FF5689C76567A /* Pods-TeamDeew-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDeew-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDeew-tvOSTests/Pods-TeamDeew-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		E560EBCD240E4AD796CEEAAC /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
-		EA7D54A8218143E699F7477F /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
-		EAC3FEC263374B72A456B150 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
-		F0889B1C6A41FC7988FCFEFE /* Pods-TeamDeew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamDeew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamDeew/Pods-TeamDeew.debug.xcconfig"; sourceTree = "<group>"; };
-		FA8BE8A921B3278900E685DF /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFetchBlob.xcodeproj; path = "../node_modules/rn-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; };
-		FA8BE90821B344C100E685DF /* RNFS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
-		FA8BE95621B356EB00E685DF /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
+		1435329DD56B4980AA848255 /* TeamDEEW.png */ = {isa = PBXFileReference; name = "TeamDEEW.png"; path = "../assets/TeamDEEW.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB71B33D72FC40DEAFEA9842 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Montserrat-ExtraLight.ttf"; path = "../assets/Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -679,8 +671,7 @@
 				00E356EF1AD99517003FC87E /* TeamDeewTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				55134D92AE82608BBA4E60FA /* Pods */,
-				FA8BE92021B356C900E685DF /* Recovered References */,
+				987EA80764C74CA2ACBCFA93 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -707,56 +698,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA8BE8AA21B3278900E685DF /* Products */ = {
-			isa = PBXGroup;
+		987EA80764C74CA2ACBCFA93 /* Resources */ = {
+			isa = "PBXGroup";
 			children = (
-				FA8BE8D321B3278A00E685DF /* libRNFetchBlob.a */,
+				1435329DD56B4980AA848255 /* TeamDEEW.png */,
+				EB71B33D72FC40DEAFEA9842 /* Montserrat-ExtraLight.ttf */,
 			);
-			name = Products;
+			name = Resources;
 			sourceTree = "<group>";
-		};
-		FA8BE90921B344C100E685DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA8BE90E21B344C100E685DF /* libRNFS.a */,
-				FA8BE91021B344C100E685DF /* libRNFS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA8BE92021B356C900E685DF /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				8DAFD704B9D64F8D86341469 /* libBVLinearGradient.a */,
-				E560EBCD240E4AD796CEEAAC /* libRNGestureHandler.a */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		FA8BE94921B356CC00E685DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA8BE94D21B356CC00E685DF /* libRNGestureHandler.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA8BE94E21B356CC00E685DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA8BE95321B356CC00E685DF /* libBVLinearGradient.a */,
-				FA8BE95521B356CC00E685DF /* libBVLinearGradient.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA8BE95721B356EB00E685DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA8BE95B21B356EB00E685DF /* libRNImagePicker.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -1276,6 +1226,8 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				6848A2BBE79B4DC38D5E0BDD /* TeamDEEW.png in Resources */,
+				802BDA65BB5A43BE8655953A /* Montserrat-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
