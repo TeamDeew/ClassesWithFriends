@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Dimensions } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 
 import Layout from "./components/Layout";
 import UploadPage from "./components/UploadPage";
+import Willtesting from "./components/EnterCode";
 
 export default class App extends Component {
   render() {
@@ -21,6 +23,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "rgba(151, 213,200, 1)"
-    
   }
 });
