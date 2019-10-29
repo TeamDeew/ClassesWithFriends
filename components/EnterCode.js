@@ -11,55 +11,41 @@ import {
 } from "react-native";
 import TeamDeew from "../assets/classeswithfriends.png";
 import LinearGradient from "react-native-linear-gradient";
-import { createStackNavigator, createAppContainer } from "react-navigation";
 
-export default class EnterCode extends Component {
-  state = {
-    text: ""
-  };
-
-  render() {
-    let component;
-
-    return (
-      <LinearGradient
-        start={{ x: 1.0, y: 0.25 }}
-        end={{ x: 0.0, y: 0.75 }}
-        colors={["#ff146c", "#ff4b2b"]}
-      >
-        <ScrollView>
-          <View style={styles.container}>
-            <View style={styles.topContainer}>
-              <Image source={TeamDeew} style={styles.image} />
-            </View>
-            <View style={styles.buttonContainer}>
-              <Text style={styles.resText}>
-                {this.props.response &&
-                  `You have the following courses: ${this.props.response} !`}
-              </Text>
-              <TextInput
-                style={styles.button}
-                onChangeText={text => this.props.codeHandler(text)}
-                value={this.props.codeVal}
-              >
-                {" "}
-              </TextInput>
-
-              <TouchableOpacity
-                style={styles.button}
-                onPress={this.props.onPress}
-              >
-                <Text style={styles.buttonText}> Enter Code </Text>
-              </TouchableOpacity>
-            </View>
+export const EnterCode = props => {
+  return (
+    <LinearGradient
+      start={{ x: 1.0, y: 0.25 }}
+      end={{ x: 0.0, y: 0.75 }}
+      colors={["#ff146c", "#ff4b2b"]}
+    >
+      <ScrollView>
+        <View style={styles.container}>
+          <View style={styles.topContainer}>
+            <Image source={TeamDeew} style={styles.image} />
           </View>
-        </ScrollView>
-      </LinearGradient>
-    );
-  }
-}
+          <View style={styles.buttonContainer}>
+            <Text style={styles.resText}>
+              {props.response &&
+                `You have the following courses: ${props.response} !`}
+            </Text>
+            <TextInput
+              style={styles.button}
+              onChangeText={text => props.codeHandler(text)}
+              value={props.codeVal}
+            >
+              {" "}
+            </TextInput>
 
-///*<Text style={styles.title}> Classes with friends </Text>
+            <TouchableOpacity style={styles.button} onPress={props.onPress}>
+              <Text style={styles.buttonText}> Enter Code </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ScrollView>
+    </LinearGradient>
+  );
+};
 
 const styles = StyleSheet.create({
   resText: {

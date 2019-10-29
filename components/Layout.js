@@ -12,14 +12,8 @@ import LinearGradient from "react-native-linear-gradient";
 import axios from "axios";
 import ImagePicker from "react-native-image-picker";
 
-import {
-  createUserCode,
-  decodeUserCode,
-  compareCourseCodes,
-  encodeCourseCode,
-  decodeCourseCode
-} from "../helpers/encoding";
-import EnterCode from "./EnterCode";
+import { createUserCode, compareCourseCodes } from "../helpers/encoding";
+import { EnterCode } from "./EnterCode";
 import TeamDeew from "../assets/classeswithfriends.png";
 
 export default class Homescreen extends Component {
