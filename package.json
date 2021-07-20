@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.18.1",
     "react": "16.6.1",
-    "react-native": "^0.61.2",
+    "react-native": "^0.62.3",
     "react-native-cloud-vision-api": "^0.2.1",
     "react-native-fs": "^2.12.1",
     "react-native-gesture-handler": "^1.0.10",
